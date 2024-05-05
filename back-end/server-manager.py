@@ -84,6 +84,7 @@ def main(config_path):
 
         # Read message in the bottle, if any.
         message = read_json(bottle_path)
+        print(message)
         if message.get('action') == 'restart':
             restart = True
             print(' >>> Restart requested')

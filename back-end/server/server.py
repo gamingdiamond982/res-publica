@@ -11,7 +11,8 @@ import praw
 import prawcore.exceptions
 from flask import Flask, request, redirect, send_from_directory, jsonify, abort
 from werkzeug.exceptions import NotFound
-from werkzeug.urls import url_encode
+# from werkzeug.urls import url_encode
+from urllib.parse import urlencode as url_encode
 
 from .api.core import create_core_blueprint, get_auth_level, authenticate
 from .api.election_management import create_election_management_blueprint
